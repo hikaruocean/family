@@ -14,6 +14,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li <?php echo $bag->req->uri == "" ? 'class="active"' : ''?>><a href="/">Home</a></li>
         <li <?php echo $bag->req->uri == "/wedding" ? 'class="active"' : ''?>><a href="/wedding" class="smoothscroll">Wedding</a></li>
+        <li <?php echo $bag->req->uri == "/portrait" ? 'class="active"' : ''?>><a href="/portrait" class="smoothscroll">Portrait</a></li>
       </ul>
     </div>
     <!--/.nav-collapse -->
