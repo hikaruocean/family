@@ -64,6 +64,7 @@ td {
 }
 </style>
 <body>
+<div id="fullscreen">
   <table>
       <tr>
           <td class="name p1">張 皓綸</td>
@@ -76,6 +77,7 @@ td {
           <td class="score p2"></td>
       </tr>
   </table>
+  <input type="button" id="setFullScreen" value="full screen"/>
   <div class="mGame">
       <select>
           <option value="0">0</option>
@@ -98,6 +100,7 @@ td {
           <option value="60">AD</option>
       </select>
   </div>
+</div>
   <script src="/lib/jquery/jquery.min.js"></script>
   <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
   <script>
@@ -107,6 +110,9 @@ td {
   var p2Score = 0;
       $(function(){
          updateBoard();
+         $(document).on('click', '#setFullScreen', function (e) {
+             document.getElementById('fullscreen').requestFullscreen();
+         });
          $(document).on('click', '.name', function (e) {
              e.preventDefault();
              var classStr = $(this).attr('class');
