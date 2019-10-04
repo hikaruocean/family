@@ -5,6 +5,7 @@ $dispatcher = \FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) 
     $r->addRoute('GET', '/wedding', 'Index::wedding');
     $r->addRoute('GET', '/daily', 'Index::daily');
     $r->addRoute('GET', '/portrait', 'Index::portrait');
+    $r->addRoute('GET', '/score', 'Game::score');
     // {id} must be a number (\d+)
     // $r->addRoute('GET', '/user/{id:\d+}', 'Index::index');
     // The /{title} suffix is optional
