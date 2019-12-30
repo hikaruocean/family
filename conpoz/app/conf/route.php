@@ -7,7 +7,7 @@ $dispatcher = \FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) 
     $r->addRoute('GET', '/portrait', 'Index::portrait');
     $r->addRoute('GET', '/score', 'Game::score');
     $r->addRoute('GET', '/scoreStream', 'Game::mjpeg');
-    $r->addRoute('GET', '/api/setScore', 'Game::setScore');
+    $r->addRoute('POST', '/api/setScore', 'Game::setScore');
     // {id} must be a number (\d+)
     // $r->addRoute('GET', '/user/{id:\d+}', 'Index::index');
     // The /{title} suffix is optional
